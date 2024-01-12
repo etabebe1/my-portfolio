@@ -1,9 +1,5 @@
-import React from 'react'
+const TopLeftImg = () => {
+  return <div>Top Left Image</div>;
+};
 
-export default function TopLeftImage() {
-  return (
-    <div>
-      This is TopLeftImage
-    </div>
-  )
-}
+export default TopLeftImg;
