@@ -53,9 +53,9 @@ export default function Nav() {
                 <div className="flex justify-center items-center">
                   {/* triangle */}
 
-                  {/* <div className="border-solid border-r-black/55 border-r-8 border-y-transparent border-y-[10px] border-l-0"></div> */}
+                  <div className="border-solid border-r-white border-r-8 border-y-transparent border-y-[6px] border-l-0"></div>
 
-                  <div className="text-[12px] capitalize text font-semibold bg-black/55 px-3 border-r-2 rounded-sm shadow-black/80 shadow-md">
+                  <div className="text-[12px] capitalize text font-semibold bg-black/55 px-3 border-r-2 rounded-sm shadow-md shadow-black/80">
                     {link.name}
                   </div>
                 </div>
