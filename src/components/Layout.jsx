@@ -1,11 +1,4 @@
 // import { Sora } from "@next/font/google";
-
-// component
-import Nav from "./Nav";
-import Header from "./Header";
-import TopLeftImg from "./TopLeftImage";
-import Home from "../pages/home/Home";
-
 // font setting
 // const sora = Sora({
 //   subsets: ["latin"],
@@ -13,22 +6,22 @@ import Home from "../pages/home/Home";
 //   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 // });
 
-function Layout() {
+// component
+
+
+function Layout({ children }) {
   const PF = process.env.PUBLIC_URL;
 
   return (
     <div
-      className="font-poppins h-screen text-white/80 font-semibold"
+      className="h-screen text-white font-mono"
       style={{
         backgroundImage: `url(${PF}/images/black2.jpg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <TopLeftImg />
-      <Nav />
-      <Header />
-      <Home />
+      {children}
     </div>
   );
 }
