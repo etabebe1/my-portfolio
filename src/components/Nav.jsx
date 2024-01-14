@@ -35,15 +35,15 @@ export default function Nav() {
   return (
     <nav className="flex flex-col items-center xl:justify-center gap-y-4 fixed  bottom-0 w-full mt-auto z-50 xl:left-[2%] xl:w-16 xl:max-w-md xl:h-screen">
       {/* inner her */}
-      <div className="text-white flex w-full xl:flex-col justify-between items-center xl:justify-center gap-y-10 px-4 md:px-40 xl:h-[23rem] h-[80px] xl:px-4 xl:py-2 bg-gradient-to-br py-8 backdrop-blur-sm text-2xl xl:text-xl xl:rounded-full bg-black/55 shadow-black/80 shadow-lg">
+      <div className="text-white flex w-full xl:flex-col justify-between items-center xl:justify-center gap-y-10 px-4 md:px-40 xl:h-[23rem] h-[0px] xl:px-4 xl:py-2 bg-gradient-to-br py-8 backdrop-blur-sm text-2xl xl:text-xl xl:rounded-full bg-black/55 shadow-black/80 shadow-lg">
         {navData.map((link, index) => {
           return (
             <Link
               to={link.path}
               key={index}
               className={`${
-                link.path === location.pathname && "text-red-700 "
-              } relative flex items-center group hover:text-red-600 transition duration-300`}
+                link.path === location.pathname && "text-sky-900 "
+              } relative flex items-center group hover:text-sky-700 transition duration-300`}
             >
               {/* icons */}
               <div>{link.icon}</div>

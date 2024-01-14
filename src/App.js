@@ -1,12 +1,11 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 // components
-import Layout from "./components/Layout";
-import Home from "./pages/home/Home";
-import About from "./pages/about/about";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
 import TopLeftImage from "./components/TopLeftImage";
+import AnimatedRoute from "./components/AnimatedRoute";
+
 
 function App() {
   return (
@@ -15,16 +14,7 @@ function App() {
       <Header />
       <TopLeftImage />
 
-      <Layout>
-        <Routes>
-          <Route
-            path="/"
-            exact
-            element={<Layout children={<Home />}></Layout>}
-          />
-          {/* <Route path="/about" element={<About />} /> */}
-        </Routes>
-      </Layout>
+      <AnimatedRoute />
     </Router>
   );
 }

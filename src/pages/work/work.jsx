@@ -1,12 +1,12 @@
 // component
 import Transition from "../../components/Transition";
 
-function Services() {
+function Work() {
   return (
     <Transition>
-      <div>Services</div>
+      <div>Work</div>
     </Transition>
   );
 }
 
-export default Services;
+export default Work;

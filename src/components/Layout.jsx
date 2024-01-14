@@ -6,7 +6,6 @@
 //   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 // });
 
-// component
 
 
 function Layout({ children }) {
@@ -16,7 +15,7 @@ function Layout({ children }) {
     <div
       className="h-screen text-white font-mono"
       style={{
-        backgroundImage: `url(${PF}/images/black2.jpg)`,
+        backgroundImage: `url(${PF}/images/white.jpg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
