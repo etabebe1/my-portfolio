@@ -18,9 +18,9 @@ const transitionVariants = {
 
 const Transition = ({ children }) => {
   return (
-    < div className ="bg-gradient-to-r from-primary/70 via-black/20 to-black/20 h-full ">
+    <div className="bg-gradient-to-r from-primary/70 via-black/20 to-black/20 h-full ">
       <motion.div
-        className="fixed top-0 bottom-0 right-full w-screen h-screen z-30 bg-[#003c3c]"
+        className="fixed top-0 bottom-0 right-full w-screen h-screen z-30 bg-[#4b4b4b]"
         variants={transitionVariants}
         initial="initial"
         animate="animate"
@@ -29,7 +29,7 @@ const Transition = ({ children }) => {
       ></motion.div>
 
       <motion.div
-        className="fixed top-0 bottom-0 right-full w-screen h-screen z-20 bg-[#007d7d]/20"
+        className="fixed top-0 bottom-0 right-full w-screen h-screen z-20 bg-[#414141]/40"
         variants={transitionVariants}
         initial="initial"
         animate="animate"
@@ -38,7 +38,7 @@ const Transition = ({ children }) => {
       ></motion.div>
 
       <motion.div
-        className="fixed top-0 bottom-0 right-full w-screen h-screen z-10 bg-[#005d5d]"
+        className="fixed top-0 bottom-0 right-full w-screen h-screen z-10 bg-[#4b4b4b]"
         variants={transitionVariants}
         initial="initial"
         animate="animate"

@@ -35,7 +35,7 @@ export default function Nav() {
   return (
     <nav className="flex flex-col items-center xl:justify-center gap-y-4 fixed  bottom-0 w-full mt-auto z-50 xl:left-[2%] xl:w-16 xl:max-w-md xl:h-screen">
       {/* inner her */}
-      <div className="text-white flex w-full xl:flex-col justify-between items-center xl:justify-center gap-y-10 px-4 md:px-40 xl:h-[23rem] h-[0px] xl:px-4 xl:py-2 bg-gradient-to-br py-8 backdrop-blur-sm text-2xl xl:text-xl xl:rounded-full bg-black/55 shadow-black/80 shadow-lg">
+      <div className="text-white flex w-full xl:flex-col justify-between items-center xl:justify-center gap-y-10 px-4 md:px-40 xl:h-[23rem] h-[0px] xl:px-4 xl:py-2 bg-gradient-to-br py-8 backdrop-blur-sm text-2xl xl:text-xl xl:rounded-full bg-black/70 shadow-black/80 shadow-lg">
         {navData.map((link, index) => {
           return (
             <Link

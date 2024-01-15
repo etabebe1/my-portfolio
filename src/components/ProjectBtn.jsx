@@ -10,7 +10,7 @@ const ProjectsBtn = () => {
   return (
     <div className="mx-auto my-5">
       <Link to={"/work"}>
-        <div className="w-[180px] h-[180px] flex justify-center items-center relative group" 
+        <div className="w-[135px] h-[135px] flex justify-center items-center relative group" 
         style={{
           backgroundImage: `url(${PF}/images/circle-star.svg)`,
           backgroundSize: "cover",
@@ -18,9 +18,7 @@ const ProjectsBtn = () => {
         }}>
           <img
             src={PF + "/images/rounded-text.png"}
-            width={141}
-            height={148}
-            className="animate-spin-slow h-full w-full max-w-[141px] max-h-[148px]"
+            className="animate-spin-slow h-full w-full max-w-[111px] max-h-[118px]"
             alt=""
           />
           <HiArrowRight className="absolute text-4xl group-hover:translate-x-2 transition-all duration-500" />
