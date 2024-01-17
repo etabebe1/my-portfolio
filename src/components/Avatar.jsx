@@ -1,6 +1,10 @@
 const Avatar = () => {
-    return <div>Avatar</div>;
-  };
-  
-  export default Avatar;
-  
+  const PF = process.env.PUBLIC_URL;
+  return (
+    <>
+      <img src={`${PF}/images/avatar.png`} className="w-[510px]" alt="" />
+    </>
+  );
+};
+
+export default Avatar;
