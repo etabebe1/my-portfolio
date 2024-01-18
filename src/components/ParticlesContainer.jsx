@@ -44,16 +44,16 @@ export default function ParticlesContainer() {
             },
             repulse: {
               distance: 100,
-              duration: 0.4,
+              duration: 5,
             },
           },
         },
         particles: {
           color: {
-            value: "#ffffff",
+            value: "#000",
           },
           links: {
-            color: "#ffffff",
+            color: "#fff",
             distance: 150,
             enable: true,
             opacity: 0.5,

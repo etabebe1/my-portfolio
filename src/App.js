@@ -6,7 +6,6 @@ import Header from "./components/Header";
 import TopLeftImage from "./components/TopLeftImage";
 import AnimatedRoute from "./components/AnimatedRoute";
 
-
 function App() {
   return (
     <Router>

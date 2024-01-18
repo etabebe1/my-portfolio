@@ -22,7 +22,7 @@
 
 @layer base {
   body {
-    @apply bg-secondary overflow-hidden leading-relaxed;
+    @apply bg-transparent overflow-hidden leading-relaxed;
   }
   .page {
     @apply w-full h-screen overflow-hidden;

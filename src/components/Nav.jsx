@@ -42,7 +42,7 @@ export default function Nav() {
               to={link.path}
               key={index}
               className={`${
-                link.path === location.pathname && "text-sky-900 "
+                link.path === location.pathname && "text-sky-900"
               } relative flex items-center group hover:text-sky-700 transition duration-300`}
             >
               {/* icons */}
