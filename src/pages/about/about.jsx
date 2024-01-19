@@ -47,11 +47,11 @@ const aboutData = [
     info: [
       {
         title: "Web & Mobile App Development",
-        stage: "2011 - 2012",
+        stage: "2022 - 2024",
       },
       {
         title: "Graphic Design",
-        stage: "2009 - 2010",
+        stage: "2022 - 2024",
       },
     ],
   },
@@ -94,7 +94,7 @@ const About = () => {
         <ParticlesContainer />
       </div>
 
-      <div className="flex z-20">
+      <div className="flex z-20 px-2">
         <Circles />
         {/* avatar image */}
         <motion.div
@@ -108,17 +108,39 @@ const About = () => {
         </motion.div>
 
         {/* text */}
-        <div className="text-container flex flex-col xl:flex-row items-center  w-full  h-screen pt-20 xl:pt-0 z-20 xl:px-36">
-          <div className=" xl:h-full w-full flex justify-center items-center">
-            text
+        <div className="text-container flex flex-col xl:flex-row items-center  w-full h-screen pt-20 xl:pt-0 z-20 xl:px-28 md:px-24 gap-y-5 gap-20">
+          <div className=" xl:h-full w-full flex flex-col justify-center items-center gap-2">
+            <h1
+              style={{ textShadow: "2px 2px 7px rgba(0, 0, 0, 0.2)" }}
+              className="text-2xl xl:text-4xl text-center font-semibold"
+            >
+              Compelling<span className="text-sky-700"> journeys </span>
+              inspire remarkable designs.
+            </h1>
+            <p className="text-white/85 text-xs md:text-sm">
+              From graduating high school to evolving into a MERN stack
+              developer, my coding journey has been a captivating exploration of
+              technology. Currently immersed in the world of blockchain, I'm
+              navigating the intricacies of smart contract development. Each
+              line of code is a step forward, and the learning journey in
+              blockchain technology is a testament to my passion for innovation
+              and continuous growth.
+            </p>
           </div>
-          <div className="data-container flex flex-col gap-3  xl:h-full w-full justify-center items-center ">
+
+          <motion.div
+            variants={fadeIn("left", 0.5)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="data-container flex flex-col gap-3  xl:h-full w-full justify-center items-center "
+          >
             <div className="flex gap-4 ">
               {aboutData.map((item, index) => {
                 return (
                   <div
                     key={index}
-                    className={`relative capitalize text-sm xl:text-lg cursor-pointer before:absolute before:h-[2px] before:bottom-0 after:absolute after:h-[2px]  after:left-0 after:top-0 hover:after:w-[100%] hover:before:w-[100%] before:transition-all before:duration-500 after:transition-all after:duration-500 
+                    className={`relative capitalize text-sm xl:text-lg font-semibold cursor-pointer before:absolute before:h-[2px] before:bottom-0 after:absolute after:h-[2px]  after:left-0 after:top-0 hover:after:w-[100%] hover:before:w-[100%] before:transition-all before:duration-500 after:transition-all after:duration-500 
                     ${
                       +index === +itemIndex
                         ? "before:bg-sky-700 before:w-[100%] after:w-[100%] after:bg-sky-700 text-sky-700"
@@ -132,12 +154,13 @@ const About = () => {
               })}
             </div>
 
+            {/* motion framer not working */}
             <div className="flex flex-col gap-4 text-center items-center">
               {aboutData[itemIndex].info.map((item, index) => {
                 return (
-                  <div className="" key={index}>
+                  <div key={index}>
                     {/* title */}
-                    <span className="text-sm md:text-base lg:text-lg text-sky-700">
+                    <span className="text-sm md:text-base lg:text-lg text-sky-700 ">
                       {item.title}
                     </span>
 
@@ -164,7 +187,7 @@ const About = () => {
                 );
               })}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </Transition>

@@ -28,7 +28,7 @@ const socialData = [
 
 const Header = () => {
   return (
-    <header className="absolute h-14 w-full z-50 bg-gradient-to-b from-black/30 flex items-center">
+    <header className="absolute h-14 w-full z-50 bg-gradient-to-b from-black/30 flex items-center xl:px-28 md:px-24">
       <div className="max-w-5xl w-full mx-auto flex items-center xl:py-3 px-2 xl:px-0">
         <Link
           to={`http://localhost:3000/`}
