@@ -32,7 +32,7 @@ const Header = () => {
       <div className="max-w-5xl w-full mx-auto flex items-center xl:py-3 px-2 xl:px-0">
         <Link
           to={`http://localhost:3000/`}
-          className="logo text-white hover:text-sky-700 font-bold text-2xl xl:text-3xl w-full cursor-pointer transition duration-500"
+          className="logo text-white hover:text-sky-700 font-bold text-2xl xl:text-3xl w-full cursor-pointer transition duration-500 text-shadow-md"
         >
           Bit Verse
         </Link>
@@ -41,7 +41,7 @@ const Header = () => {
             const { icon, link } = item;
             return (
               <div
-                className="text-white text-base xl:text-2xl hover:text-sky-700 border hover:border-sky-700 p-1 xl:rounded-lg rounded-md transition duration-500 cursor-pointer"
+                className="text-white text-base xl:text-2xl hover:text-sky-700 border hover:border-sky-700 hover:bg-white/10 p-1 xl:rounded-lg rounded-md transition duration-500 cursor-pointer"
                 onClick={() => (window.location.href = `${link}`)}
                 key={index + 1}
               >
