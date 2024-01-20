@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+// library
+import CountUp from "react-countup";
 
 // component
 import Transition from "../../components/Transition";
@@ -6,9 +8,8 @@ import Circles from "../../components/Circles";
 import Avatar from "../../components/Avatar";
 import ParticlesContainer from "../../components/ParticlesContainer";
 
-// framer-motion variant
+// framer-motion custom variant
 import { fadeIn } from "../../variants";
-
 // framer-motion
 import { motion } from "framer-motion";
 
@@ -94,7 +95,7 @@ const About = () => {
         <ParticlesContainer />
       </div>
 
-      <div className="flex z-20 px-2">
+      <div className="flex z-20 px-2 ">
         <Circles />
         {/* avatar image */}
         <motion.div
@@ -108,8 +109,14 @@ const About = () => {
         </motion.div>
 
         {/* text */}
-        <div className="text-container flex flex-col xl:flex-row items-center  w-full h-screen pt-20 xl:pt-0 z-20 xl:px-28 md:px-24 gap-y-5 gap-20">
-          <div className=" xl:h-full w-full flex flex-col justify-center items-center gap-2">
+        <div className="text-container flex flex-col xl:flex-row items-center  w-full h-screen  z-20 xl:px-28 md:px-24 gap-y-5 gap-20 xl:pt-0 pt-32">
+          <motion.div
+            variants={fadeIn("right", 0.5)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className=" xl:h-full w-full flex flex-col justify-center items-center gap-5"
+          >
             <h1
               style={{ textShadow: "2px 2px 7px rgba(0, 0, 0, 0.2)" }}
               className="text-2xl xl:text-4xl text-center font-semibold"
@@ -117,7 +124,7 @@ const About = () => {
               Compelling<span className="text-sky-700"> journeys </span>
               inspire remarkable designs.
             </h1>
-            <p className="text-white/85 text-xs md:text-sm">
+            <p className="text-white/85 text-sm">
               From graduating high school to evolving into a MERN stack
               developer, my coding journey has been a captivating exploration of
               technology. Currently immersed in the world of blockchain, I'm
@@ -126,7 +133,35 @@ const About = () => {
               blockchain technology is a testament to my passion for innovation
               and continuous growth.
             </p>
-          </div>
+
+            {/* Counter */}
+            <div className="container flex justify-center text-center gap-2">
+              {/* experience */}
+              <div>
+                <div className="counter-container text-xl xl:text-2xl font-semibold text-sky-700">
+                  <CountUp start={0.1} end={2} duration={5} />+
+                </div>
+                <span>Years of experience</span>
+              </div>
+
+              {/*Project */}
+              <div className="relative px-3">
+                <div className="before:absolute before:bg-gray-800 before:w-[1px] before:h-full before:left-0 after:absolute after:bg-gray-800 after:w-[1px] after:h-full after:right-0 after:top-0">
+                  <div className="counter-container text-xl xl:text-2xl font-semibold text-sky-700">
+                    <CountUp start={1} end={50} duration={5} />+
+                  </div>
+                  <span>Finished Project</span>
+                </div>
+              </div>
+              {/* worked with */}
+              <div>
+                <div className="counter-container text-xl xl:text-2xl font-semibold text-sky-700">
+                  <CountUp start={0.1} end={30} duration={5} />+
+                </div>
+                <span>collaborated developers</span>
+              </div>
+            </div>
+          </motion.div>
 
           <motion.div
             variants={fadeIn("left", 0.5)}
@@ -160,7 +195,7 @@ const About = () => {
                 return (
                   <div key={index}>
                     {/* title */}
-                    <span className="text-sm md:text-base lg:text-lg text-sky-700 ">
+                    <span className="text-sm md:text-base lg:text-lg text-sky-700">
                       {item.title}
                     </span>
 
@@ -195,16 +230,3 @@ const About = () => {
 };
 
 export default About;
-
-{
-  /* <div
-                    key={index}
-                    className={`${
-                      item.title === dataItem &&
-                      "before:bg-sky-700 before:w-[100%] after:w-[100%] after:bg-sky-700 text-sky-700"
-                    }    z-30`}
-                    onClick={() => setDataItem(item.title)}
-                  >
-                    <span>{item.title}</span>
-                  </div> */
-}

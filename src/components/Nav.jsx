@@ -3,24 +3,24 @@ import { Link, useLocation } from "react-router-dom";
 
 // icons
 import {
-  HiHome,
   HiUser,
   HiViewColumns,
   HiRectangleGroup,
-  HiChatBubbleBottomCenterText,
   HiEnvelope,
 } from "react-icons/hi2";
+import { PiChatDotsFill } from "react-icons/pi";
+import { IoHome } from "react-icons/io5";
 
 // nav data
 export const navData = [
-  { name: "home", path: "/", icon: <HiHome /> },
+  { name: "home", path: "/", icon: <IoHome /> },
   { name: "about", path: "/about", icon: <HiUser /> },
   { name: "services", path: "/services", icon: <HiRectangleGroup /> },
   { name: "work", path: "/work", icon: <HiViewColumns /> },
   {
     name: "testimonials",
     path: "/testimonials",
-    icon: <HiChatBubbleBottomCenterText />,
+    icon: <PiChatDotsFill />,
   },
   {
     name: "contact",
