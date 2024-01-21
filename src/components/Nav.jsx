@@ -2,16 +2,17 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 // icons
-import { HiUser, HiViewColumns, HiRectangleGroup } from "react-icons/hi2";
+import { HiUser, HiViewColumns, } from "react-icons/hi2";
 import { PiChatDotsFill } from "react-icons/pi";
 import { IoHome } from "react-icons/io5";
 import { IoMdMailUnread } from "react-icons/io";
+import { FaServicestack } from "react-icons/fa";
 
 // nav data
 export const navData = [
   { name: "home", path: "/", icon: <IoHome /> },
   { name: "about", path: "/about", icon: <HiUser /> },
-  { name: "services", path: "/services", icon: <HiRectangleGroup /> },
+  { name: "services", path: "/services", icon: <FaServicestack /> },
   { name: "work", path: "/work", icon: <HiViewColumns /> },
   {
     name: "testimonials",
