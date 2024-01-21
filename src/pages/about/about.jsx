@@ -139,7 +139,7 @@ const About = () => {
               {/* experience */}
               <div>
                 <div className="counter-container text-xl xl:text-2xl font-semibold text-sky-700">
-                  <CountUp start={0.1} end={2} duration={5} />+
+                  <CountUp start={0.1} end={2} duration={10} />+
                 </div>
                 <span>Years of experience</span>
               </div>
@@ -148,7 +148,7 @@ const About = () => {
               <div className="relative px-3">
                 <div className="before:absolute before:bg-gray-800 before:w-[1px] before:h-full before:left-0 after:absolute after:bg-gray-800 after:w-[1px] after:h-full after:right-0 after:top-0">
                   <div className="counter-container text-xl xl:text-2xl font-semibold text-sky-700">
-                    <CountUp start={1} end={50} duration={5} />+
+                    <CountUp start={1} end={50} duration={10} />+
                   </div>
                   <span>Finished Project</span>
                 </div>
@@ -156,7 +156,7 @@ const About = () => {
               {/* worked with */}
               <div>
                 <div className="counter-container text-xl xl:text-2xl font-semibold text-sky-700">
-                  <CountUp start={0.1} end={30} duration={5} />+
+                  <CountUp start={0.1} end={30} duration={10} />+
                 </div>
                 <span>collaborated developers</span>
               </div>
