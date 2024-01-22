@@ -233,9 +233,6 @@ const About = () => {
       </div>
     </Transition>
   );
-
-  // return (
-  //         {/* text */}
 };
 
 export default About;
