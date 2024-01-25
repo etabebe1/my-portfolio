@@ -12,12 +12,10 @@ import {
   RxDesktop,
   RxRocket,
   RxArrowTopRight,
-  RxArrowRight,
   RxDashboard,
   RxCodesandboxLogo,
   RxCardStack,
 } from "react-icons/rx";
-
 
 // data
 const serviceData = [
