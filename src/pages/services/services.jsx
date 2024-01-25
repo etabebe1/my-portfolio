@@ -1,5 +1,11 @@
 import React from "react";
 
+// framer-motion
+import { motion } from "framer-motion";
+
+// framer-motion variant
+import { fadeIn } from "../../variants";
+
 import Transition from "../../components/Transition";
 import ParticleContainer from "../../components/ParticlesContainer";
 import Circles from "../../components/Circles";
@@ -22,20 +28,31 @@ export default function services() {
         <div className="container mx-auto">
           <div className="flex flex-col xl:flex-row justify-center items-center gap-3 md:px-[5rem]">
             {/* text */}
-            <div className="">
-              <h1 className="text-3xl font-semibold">My services</h1>
+            <motion.div
+              variants={fadeIn("right", 0.5)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+            >
+              <h1 className="text-4xl font-semibold">My services</h1>
               <p className="text-sm">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum
                 repudiandae, enim aliquid dicta magni expedita dignissimos quod
                 rem. Maiores, rerum eveniet sit voluptatem sint officia. Cumque
                 maxime consequatur rerum! Sunt?
               </p>
-            </div>
+            </motion.div>
 
             {/* slider conponent*/}
-            <div className="w-full max-w-[95%] xl:w-[65%]">
+            <motion.div
+              variants={fadeIn("left", 0.5)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className="w-full max-w-[95%] xl:w-[65%]"
+            >
               <ServiceSlider></ServiceSlider>
-            </div>
+            </motion.div>
           </div>
         </div>
 
