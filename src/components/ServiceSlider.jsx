@@ -9,46 +9,46 @@ import "swiper/css/scrollbar";
 
 // icons
 import {
-  RxCrop,
   RxDesktop,
-  RxPencil2,
-  RxReader,
   RxRocket,
   RxArrowTopRight,
   RxArrowRight,
+  RxDashboard,
+  RxCodesandboxLogo,
+  RxCardStack,
 } from "react-icons/rx";
 
 // data
 const serviceData = [
   {
-    icon: "/development.svg",
+    icon: <RxDesktop />,
     title: "Development",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
-    icon: "/front-end.svg",
+    icon: <RxDashboard />,
     title: "Front-End",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
-    icon: "/server-side.svg",
-    title: "Server-Side",
+    icon: <RxCardStack />,
+    title: "Back-End",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
-    icon: "/mern.svg",
-    title: "MERN-Stack",
+    icon: <RxCodesandboxLogo />,
+    title: "MERN",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
-    icon: "/seo.svg",
+    icon: <RxRocket />,
     title: "SEO",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];
 
 const ServiceSlider = () => {
-  const PF = process.env.PUBLIC_URL;
+  // const PF = process.env.PUBLIC_URL;
 
   return (
     <Swiper
@@ -70,32 +70,27 @@ const ServiceSlider = () => {
       // onSwiper={(swiper) => console.log(swiper)}
       // onSlideChange={() => console.log("slide change")}
     >
-      {/* bg-gray-500/80 hover:bg-gray-500/70 */}
       {serviceData.map((item, index) => {
         const { icon, title, description } = item;
         return (
           <SwiperSlide key={index} className="py-14 ">
-            <div className="slide-container bg-gradient-to-r from-gray-800/70 via-gray-600/70 to-gray-600/70 hover:opacity-90 h-[150px] flex p-1 py-5 xl:py-3 cursor-pointer rounded-lg transition-all duration-500 backdrop-blur-sm drop-shadow-lg">
-              {/* icon */}
-              <div className="text mb-4">
-                <img
-                  src={`${PF}/icons${icon}`}
-                  className="w-12 xl:w-20 text-white"
-                  alt=""
-                />
-              </div>
+            <div className="slide-container bg-gradient-to-r from-gray-800/70 via-gray-600/70 to-gray-600/70 hover:opacity-90 h-[180px] px-1 py-5 xl:py-3 cursor-pointer rounded-lg transition-all duration-500 backdrop-blur-sm drop-shadow-lg group flex xl:flex-col">
+              {/* icon and text */}
+              <div className="flex">
+                {/* icon */}
+                <div className="mb-4 text-2xl text-sky-700 px-1">{icon}</div>
 
-              {/* text-div */}
-              <div className="flex flex-col gap-3 text-center">
-                <div className="font-semibold text-lg text-gray-300">
-                  {title}
+                {/* text-div */}
+                <div className="flex flex-col gap-3 text-center">
+                  <div className="font-semibold text-lg text-gray-300">
+                    {title}
+                  </div>
+                  <p className="text-sm">{description}</p>
                 </div>
-                <p className="text-sm">{description}</p>
               </div>
-
               {/* arrow */}
-              <div className="text-3xl">
-                <RxArrowTopRight />
+              <div className="text-3xl ">
+                <RxArrowTopRight className="group-hover:rotate-45 group-hover:text-sky-700 transition-all duration-300" />
               </div>
             </div>
           </SwiperSlide>
