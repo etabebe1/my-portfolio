@@ -70,7 +70,7 @@ export default function Home() {
 
           {/* bg for avatar */}
           <div className="bg-image hidden xl:block ">
-            <img src={`${PF}/images/bg_explosion.png`} alt="" />
+            <img src={`${PF}/images/bg_explosion.png`} alt="avatarImage" />
           </div>
 
           {/* particle */}

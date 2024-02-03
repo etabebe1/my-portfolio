@@ -7,7 +7,8 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-// icons
+import { RxArrowRight } from "react-icons/rx";
+
 // data
 const workSlides = {
   slides: [
@@ -29,63 +30,84 @@ const workSlides = {
           title: "title",
           path: "/black4.jpg",
         },
+      ],
+    },
+    {
+      images: [
         {
           title: "title",
-          path: "/thumb4.jpg",
+          path: "/neon1.jpg",
         },
         {
           title: "title",
-          path: "/thumb1.jpg",
+          path: "/neon2.jpg",
         },
         {
           title: "title",
-          path: "/thumb2.jpg",
+          path: "/neon3.jpg",
         },
         {
           title: "title",
-          path: "/thumb3.jpg",
+          path: "/purple1.jpg",
         },
       ],
     },
-    // {
-    //   images: [
-
-    //   ],
-    // },
   ],
 };
 
 const WorkSlider = () => {
+  const PF = process.env.PUBLIC_URL;
+
   return (
     <Swiper
-      // install Swiper modules
       modules={[FreeMode, Pagination]}
+      spaceBetween={15}
+      slidesPerView={1} // Default number of slides per view
       breakpoints={{
+        // When window width is >= 320px
         320: {
           slidesPerView: 1,
-          spaceBetween: 15,
-        },
-
-        640: {
-          slidesPerView: 3,
           spaceBetween: 15,
         },
       }}
       freeMode={true}
       pagination={{ clickable: true }}
-      // onSwiper={(swiper) => console.log(swiper)}
-      // onSlideChange={() => console.log("slide change")}
+      className="mySwiper"
+      // install Swiper modules
     >
       {workSlides.slides.map((slide, index) => {
         return (
-          <SwiperSlide key={index}>
-            <div>
+          <SwiperSlide key={index} className="xl:my-10 mb-10">
+            <div className="p-2 grid grid-cols-2 grid-rows-2 gap-2">
               {slide.images.map((image, index) => {
                 return (
-                  <div key={index}>
-                    <div>
-                      {/* {console.log(image.path)} */}
-                      <img src={`${image.path}`} className="w-[500px] h-[300px]" alt="project images" />
+                  <div className="h-32 xl:h-36 w-[100%] rounded-lg relative group cursor-pointer">
+                    {/* image */}
+                    <img
+                      src={`${PF}/images${image.path}`}
+                      alt="projects"
+                      className="w-full h-full rounded-lg object-cover object-center z-10"
+                    />
+
+                    {/* overlay */}
+                    <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-slate-500/40 via-slate-900/40 to-slate-400/40 opacity-0 group-hover:opacity-80 z-20 top-0 rounded-lg transition-all duration-300 flex justify-center shadow-md">
+                      {/* title */}
+                      <div className="absolute bottom-0 translate group-hover:-translate-y-10 xl:group-hover:-translate-y-20 transition-all duration-300 ">
+                        <div className="flex items-center gap-x-2 text-[13px] xl:text-base justify-center font-semibold tracking-[.1rem] uppercase">
+                          {/* title part - 1 */}
+                          <div className="delay-250 text-shadow-xl shadow-white">
+                            Live
+                          </div>
+                          {/* title part - 2 */}
+                          <div className="text-shadow-xl shadow-white translate-y-[220%] xl:translate-y-[350%] group-hover:translate-y-0 transition-all duration-300 delay-150">
+                            Project
+                          </div>
+                          {/* icon */}
+                          <div className="text-[16px] xl:text-xl text-shadow-xl shadow-white translate-y-[280%] xl:translate-y-[410%] group-hover:translate-y-0 transition-all duration-300 delay-200">
+                            <RxArrowRight />
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 );
@@ -99,44 +121,3 @@ const WorkSlider = () => {
 };
 
 export default WorkSlider;
-
-// {slide.images.map((image, index) => {
-//   return (
-//     <div>
-//       <div>
-//         {/* Images */}
-//         {console.log(image.path)}
-//         {/* <img src={`${image}`} alt="" /> */}
-//       </div>
-//     </div>
-//   );
-// })}
-
-// return (
-//   <SwiperSlide key={index} className="py-14 ">
-//     <div className="slide-container bg-gradient-to-r from-gray-800/70 via-gray-600/70 to-gray-600/70 hover:opacity-90 h-[180px] px-1 py-5 xl:py-3 cursor-pointer rounded-lg transition-all duration-500 backdrop-blur-sm drop-shadow-lg group flex xl:flex-col">
-//       {/* icon and text */}
-//       <div className="flex">
-//         {/* icon */}
-//         <div className="mb-4 text-2xl text-sky-700 px-1">Icon</div>
-
-//         {/* text-div */}
-//         <div className="flex flex-col gap-3 text-center">
-//           <div className="font-semibold text-lg text-gray-300">
-//             Title
-//           </div>
-//           <p className="text-sm">
-//             Lorem ipsum dolor sit amet consectetur adipisicing elit.
-//             Quibusdam, dolore quae! Distinctio nulla repellendus beatae
-//             consequatur omnis error vero dolore, facere sunt fuga
-//             maiores mollitia expedita maxime optio illo quos.
-//           </p>
-//         </div>
-//       </div>
-//       {/* arrow */}
-//       <div className="text-3xl ">
-//         <div className="group-hover:rotate-45 group-hover:text-sky-700 transition-all duration-300" />
-//       </div>
-//     </div>
-//   </SwiperSlide>
-// );

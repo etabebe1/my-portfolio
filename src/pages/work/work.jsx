@@ -26,13 +26,14 @@ function Work() {
 
         {/* All content */}
         <div className="container mx-auto">
-          <div className="flex flex-col xl:flex-row justify-center items-center gap-3 md:px-[5rem]">
+          <div className="flex flex-col xl:flex-row items-center gap-3 md:px-[5rem] w-[100%]">
             {/* text */}
             <motion.div
               variants={fadeIn("right", 0.5)}
               initial="hidden"
               animate="show"
               exit="hidden"
+              className="text-center xl:text-left"
             >
               <h1 className="text-4xl font-semibold">My Projects</h1>
               <p className="text-sm">
@@ -49,7 +50,7 @@ function Work() {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="w-full max-w-[95%] xl:w-[65%]"
+              className="xl:w-[60%] w-[110%] p-3"
             >
               <WorkSlider></WorkSlider>
             </motion.div>
@@ -68,7 +69,7 @@ function Work() {
             <Bulb />
           </div>
         </div>
-      </div>{" "}
+      </div>
     </Transition>
   );
 }

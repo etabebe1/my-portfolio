@@ -26,7 +26,7 @@ export default function services() {
 
         {/* All content */}
         <div className="container mx-auto">
-          <div className="flex flex-col xl:flex-row justify-center items-center gap-3 md:px-[5rem]">
+          <div className="flex flex-col xl:flex-row justify-center items-center gap-3 md:px-[5rem] text-center xl:text-left">
             {/* text */}
             <motion.div
               variants={fadeIn("right", 0.5)}
@@ -43,7 +43,7 @@ export default function services() {
               </p>
             </motion.div>
 
-            {/* slider conponent*/}
+            {/* slider component */}
             <motion.div
               variants={fadeIn("left", 0.5)}
               initial="hidden"

@@ -47,7 +47,6 @@ const serviceData = [
 ];
 
 const ServiceSlider = () => {
-  // const PF = process.env.PUBLIC_URL;
 
   return (
     <Swiper
