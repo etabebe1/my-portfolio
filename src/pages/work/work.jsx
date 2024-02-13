@@ -35,7 +35,12 @@ function Work() {
               exit="hidden"
               className="text-center xl:text-left"
             >
-              <h1 className="text-4xl font-semibold">My Projects</h1>
+              <h1
+                style={{ textShadow: "2px 2px 7px rgba(0, 0, 0, 0.2)" }}
+                className="text-4xl font-semibold"
+              >
+                My Projects
+              </h1>
               <p className="text-sm">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum
                 repudiandae, enim aliquid dicta magni expedita dignissimos quod

@@ -209,7 +209,7 @@ const About = () => {
                                 src={`${PF}/${icon}`}
                                 key={index}
                                 alt=""
-                                className="w-[35px] md:w-[50px] xl:w-[55px] border p-1 rounded-md shadow-md hover:p-0 transition-all duration-300"
+                                className="w-[35px] md:w-[50px] xl:w-[55px] border p-1 rounded-md shadow-md hover:p-0 transition-all duration-300 z-50"
                               />
                             );
                           })}

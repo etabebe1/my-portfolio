@@ -86,11 +86,12 @@ const WorkSlider = () => {
                     <img
                       src={`${PF}/images${image.path}`}
                       alt="projects"
+                      loading="lazy"
                       className="w-full h-full rounded-lg object-cover object-center z-10"
                     />
 
                     {/* overlay */}
-                    <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-slate-500/40 via-slate-900/40 to-slate-400/40 opacity-0 group-hover:opacity-80 z-20 top-0 rounded-lg transition-all duration-300 flex justify-center shadow-md">
+                    <div className="w-full h-full absolute   inset-0 bg-gradient-to-r from-slate-500/40 via-slate-900/40 to-slate-400/40 opacity-0 group-hover:opacity-80 z-20 top-0 rounded-lg transition-all duration-300 flex justify-center shadow-md">
                       {/* title */}
                       <div className="absolute bottom-0 translate group-hover:-translate-y-10 xl:group-hover:-translate-y-20 transition-all duration-300 ">
                         <div className="flex items-center gap-x-2 text-[13px] xl:text-base justify-center font-semibold tracking-[.1rem] uppercase">
