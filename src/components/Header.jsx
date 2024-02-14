@@ -35,7 +35,7 @@ const Header = () => {
             to={`http://localhost:3000/`}
             className="logo text-white hover:text-sky-700 font-bold text-3xl xl:text-4xl w-full cursor-pointer transition duration-500 text-shadow-lg"
           >
-            Bit Verse
+            Verse Grid
           </Link>
         </div>
         <div className="flex gap-3 xl:gap-6">

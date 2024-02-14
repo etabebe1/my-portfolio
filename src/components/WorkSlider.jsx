@@ -85,6 +85,7 @@ const WorkSlider = () => {
               {slide.images.map((image, index) => {
                 return (
                   <div
+                    key={index}
                     className="h-32 xl:h-36 w-[100%] rounded-lg relative group cursor-pointer"
                     onClick={() => navigate("/upcoming")}
                   >
