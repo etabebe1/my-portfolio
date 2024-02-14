@@ -15,7 +15,7 @@ import WorkSlider from "../../components/WorkSlider";
 function Work() {
   return (
     <Transition>
-      <div className="flex h-full items-center py-36">
+      <div className="flex h-screen items-center">
         {/* particles */}
         <ParticleContainer />
 
@@ -26,7 +26,7 @@ function Work() {
 
         {/* All content */}
         <div className="container mx-auto">
-          <div className="flex flex-col xl:flex-row items-center gap-3 md:px-[5rem] w-[100%]">
+          <div className="flex flex-col xl:flex-row items-center justify-center gap-3 md:px-[5rem] w-[100%]">
             {/* text */}
             <motion.div
               variants={fadeIn("right", 0.5)}
@@ -37,11 +37,11 @@ function Work() {
             >
               <h1
                 style={{ textShadow: "2px 2px 7px rgba(0, 0, 0, 0.2)" }}
-                className="text-4xl font-semibold"
+                className="text-xl md:text-4xl font-semibold"
               >
                 My Projects
               </h1>
-              <p className="text-sm">
+              <p className="text-xs sm:text-sm">
                 Stay tuned for our upcoming projects, where innovation meets
                 excellence. Exciting developments are on the horizon, promising
                 to redefine the boundaries of technology and creativity. Join us
@@ -49,7 +49,7 @@ function Work() {
               </p>
             </motion.div>
 
-            {/* slider conponent*/}
+            {/* slider component*/}
             <motion.div
               variants={fadeIn("left", 0.5)}
               initial="hidden"

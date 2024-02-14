@@ -25,7 +25,7 @@ export default function Home() {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1 text-2xl"
+            className="h1 text-lg md:text-2xl"
           >
             Welcome to digital reality, <br /> meet
             <span className="text-red-600"> Jeremiah </span>

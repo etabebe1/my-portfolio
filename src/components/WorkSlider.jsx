@@ -42,15 +42,15 @@ const workSlides = {
         },
         {
           title: "title",
-          path: "/vibeverse",
+          path: "/vibeverse.jpg",
         },
         {
           title: "title",
-          path: "/vibeverseUI",
+          path: "/vibeverseUI.jpg",
         },
         {
           title: "title",
-          path: "/forex-strategy",
+          path: "/forex-strategy.jpg",
         },
       ],
     },
@@ -86,7 +86,7 @@ const WorkSlider = () => {
                 return (
                   <div
                     key={index}
-                    className="h-32 xl:h-36 w-[100%] rounded-lg relative group cursor-pointer"
+                    className="sm:h-28 xl:h-36 w-[100%] rounded-lg relative group cursor-pointer"
                     onClick={() => navigate("/upcoming")}
                   >
                     {/* image */}
@@ -96,12 +96,11 @@ const WorkSlider = () => {
                       loading="lazy"
                       className="w-full h-full rounded-lg object-cover object-center z-10"
                     />
-
                     {/* overlay */}
                     <div className="w-full h-full absolute   inset-0 bg-gradient-to-r from-slate-500/40 via-slate-900/40 to-slate-400/40 opacity-0 group-hover:opacity-80 z-20 top-0 rounded-lg transition-all duration-300 flex justify-center shadow-md">
                       {/* title */}
                       <div className="absolute bottom-0 translate group-hover:-translate-y-10 xl:group-hover:-translate-y-20 transition-all duration-300 ">
-                        <div className="flex items-center gap-x-2 text-[13px] xl:text-base justify-center font-semibold tracking-[.1rem] uppercase">
+                        <div className="flex items-center gap-x-2 text-[12px] xl:text-base justify-center font-semibold tracking-[.1rem] uppercase">
                           {/* title part - 1 */}
                           <div className="delay-250 text-shadow-xl shadow-white">
                             Live
@@ -129,3 +128,35 @@ const WorkSlider = () => {
 };
 
 export default WorkSlider;
+
+//                     className="h-32 xl:h-36 w-[100%] rounded-lg relative group cursor-pointer bg-green-500"
+
+//     return (
+//
+//         {/* image */}
+//         <img
+//           src={`${PF}/images${image.path}`}
+//           alt="projects"
+//           loading="lazy"
+//           className="w-full h-full rounded-lg object-cover object-center z-10"
+//         />
+//         {/* overlay */}
+//         <div className="w-full h-full absolute   inset-0 bg-gradient-to-r from-slate-500/40 via-slate-900/40 to-slate-400/40 opacity-0 group-hover:opacity-80 z-20 top-0 rounded-lg transition-all duration-300 flex justify-center shadow-md">
+//           {/* title */}
+//           <div className="absolute bottom-0 translate group-hover:-translate-y-10 xl:group-hover:-translate-y-20 transition-all duration-300 ">
+//             <div className="flex items-center gap-x-2 text-[13px] xl:text-base justify-center font-semibold tracking-[.1rem] uppercase">
+//               {/* title part - 1 */}
+//               <div className="delay-250 text-shadow-xl shadow-white">Live</div>
+//               {/* title part - 2 */}
+//               <div className="text-shadow-xl shadow-white translate-y-[220%] xl:translate-y-[350%] group-hover:translate-y-0 transition-all duration-300 delay-150">
+//                 Project
+//               </div>
+//               {/* icon */}
+//               <div className="text-[16px] xl:text-xl text-shadow-xl shadow-white translate-y-[280%] xl:translate-y-[410%] group-hover:translate-y-0 transition-all duration-300 delay-200">
+//                 <RxArrowRight />
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     );

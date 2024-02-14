@@ -28,7 +28,7 @@ export default function services() {
         >
           <h2
             style={{ textShadow: "2px 2px 7px rgba(0, 0, 0, 0.2)" }}
-            className="text-4xl tracking-wider font-semibold text-center"
+            className="text-lg sm:text-4xl tracking-wider font-semibold text-center"
           >
             What clients <span className="text-sky-700">say.</span>
           </h2>

@@ -22,6 +22,7 @@ export default function Contact() {
       .then(
         () => {
           console.log("SUCCESS!");
+          alert("Message has been sent!");
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -46,7 +47,7 @@ export default function Contact() {
           <div>
             <h2
               style={{ textShadow: "2px 2px 7px rgba(0, 0, 0, 0.2)" }}
-              className="text-4xl tracking-wider font-semibold text-center"
+              className="text-xl sm:text-4xl tracking-wider font-semibold text-center"
             >
               Let's <span className="text-sky-700">Connect.</span>
             </h2>
@@ -63,39 +64,43 @@ export default function Contact() {
                 type="text"
                 placeholder="Name"
                 name="user_name"
-                className="w-full p-1 border rounded-md bg-white/60 text-slate-700 backdrop-blur-sm drop-shadow-md"
+                className="w-full  sm:p-1 px-1 text-sm sm:text-base   border rounded-md bg-white/60 text-slate-700 backdrop-blur-sm drop-shadow-md"
               />
               <input
                 type="text"
                 placeholder="email"
                 name="user_email"
-                className="w-full p-1 border rounded-md bg-white/60 text-slate-700 backdrop-blur-sm drop-shadow-md"
+                className="w-full  sm:p-1 px-1 text-sm sm:text-base  border rounded-md bg-white/60 text-slate-700 backdrop-blur-sm drop-shadow-md"
               />
             </div>
             <input
               type="text"
               placeholder="Subject"
               name="subject"
-              className="p-1 border rounded-md bg-white/60 text-slate-700 backdrop-blur-sm drop-shadow-md"
-              />
+              className=" sm:p-1 px-1 text-sm sm:text-base  border rounded-md bg-white/60 text-slate-700 backdrop-blur-sm drop-shadow-md"
+            />
             <textarea
               name="message"
               placeholder="message"
-              rows="5"
-              className="p-2 border rounded-md bg-white/60 text-slate-700 backdrop-blur-sm drop-shadow-md"
+              rows="4"
+              className="sm:p-2 px-1 text-sm sm:text-base  border rounded-md bg-white/60 text-slate-700 backdrop-blur-sm drop-shadow-md"
             ></textarea>
-            <button className="w-52 bg-sky-800 hover:bg-sky-700 py-3 px-8 rounded-lg shadow-md transition duration-150">
+            <button className="text-sm sm:text-base bg-sky-800 hover:bg-sky-700 py-3 px-8 rounded-lg shadow-md transition duration-150">
               Let's talk <span>now!</span>
             </button>
           </form>
 
           <div className="flex flex-col items-end">
             <h1 className="text-gray-700">
-              <span className="text-sky-800 font-semibold">E-mail:</span>
+              <span className="text-sky-800 text-sm sm:text-base font-semibold">
+                E-mail:
+              </span>
               etabebe1@gmail.com
             </h1>
             <h1 className="text-gray-700">
-              <span className="text-sky-800 font-semibold">Tel:</span>
+              <span className="text-sky-800 text-sm sm:text-base font-semibold">
+                Tel:
+              </span>
               +25139681965
             </h1>
           </div>

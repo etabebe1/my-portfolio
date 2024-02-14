@@ -15,7 +15,7 @@ import ServiceSlider from "../../components/ServiceSlider";
 export default function services() {
   return (
     <Transition>
-      <div className="flex h-full items-center py-36">
+      <div className="flex h-screen items-center py-36">
         {/* particles */}
         <ParticleContainer />
 
@@ -26,21 +26,22 @@ export default function services() {
 
         {/* All content */}
         <div className="container mx-auto">
-          <div className="flex flex-col xl:flex-row justify-center items-center gap-3 md:px-[5rem] text-center xl:text-left">
+          <div className="flex flex-col xl:flex-row justify-center items-center gap-x-4 md:px-[5rem] text-center xl:text-left">
             {/* text */}
             <motion.div
               variants={fadeIn("right", 0.5)}
               initial="hidden"
               animate="show"
               exit="hidden"
+              className="flex flex-col"
             >
               <h1
                 style={{ textShadow: "2px 2px 7px rgba(0, 0, 0, 0.2)" }}
-                className="text-4xl font-semibold"
+                className="text-xl md:text-4xl font-semibold"
               >
                 My services
               </h1>
-              <p className="text-sm">
+              <p className="text-xs sm:text-sm">
                 Delivering cutting-edge solutions across the full development
                 spectrum, I specialize in the MERN stack, crafting seamless
                 front-end experiences, robust back-end systems, and

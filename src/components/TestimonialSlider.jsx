@@ -58,11 +58,11 @@ const TestimonialSlider = () => {
           <SwiperSlide key={index} className="xl:my-10 mb-10">
             <div className="flex flex-row w-full xl:px-20 px-12">
               <div className=" flex flex-col xl:flex-row items-center gap-x-20 gap-y-5 justify-center">
-                <div className="flex flex-col justify-center text-center xl:border-r-2 xl:pr-10">
+                <div className="flex flex-col justify-center items-center text-center xl:border-r-2 xl:pr-10">
                   <img
                     src={`${PF}/images/${image}`}
                     alt="testimonial-profile"
-                    className="h-full w-full object-cover object-center"
+                    className="h-16 w-16 sm:h-full sm:w-full object-cover object-center"
                   />
                   <h2 className="capitalize text-sm">{name}</h2>
                   <span className="uppercase text-sm font-semibold">{position}</span>
@@ -72,7 +72,7 @@ const TestimonialSlider = () => {
                     style={{ textShadow: "2px 2px 7px rgba(0, 0, 0, 0.2)" }}
                     className="text-2xl xl:text-5xl text-gray-700/90"
                   ></FaQuoteLeft>
-                  <span className="text-sm">{message}</span>
+                  <span className="text-xs">{message}</span>
                 </div>
               </div>
             </div>

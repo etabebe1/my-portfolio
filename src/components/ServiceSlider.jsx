@@ -71,7 +71,7 @@ const ServiceSlider = () => {
       {serviceData.map((item, index) => {
         const { icon, title, description } = item;
         return (
-          <SwiperSlide key={index} className="py-14 ">
+          <SwiperSlide key={index} className="py-7 md:py-14 ">
             <div className="slide-container bg-gradient-to-r from-gray-800/70 via-gray-600/70 to-gray-600/70 hover:opacity-90 h-[180px] px-1 py-5 xl:py-3 cursor-pointer rounded-lg transition-all duration-500 backdrop-blur-sm drop-shadow-lg group flex xl:flex-col">
               {/* icon and text */}
               <div className="flex">
