@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 // import swiper core and require modules
 import { Pagination, FreeMode } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,19 +18,19 @@ const workSlides = {
       images: [
         {
           title: "title",
-          path: "/black1.jpg",
+          path: "/netflix.png",
         },
         {
           title: "title",
-          path: "/black2.jpg",
+          path: "/imageGeneratorAI.png",
         },
         {
           title: "title",
-          path: "/black3.jpg",
+          path: "/dashboard.png",
         },
         {
           title: "title",
-          path: "/black4.jpg",
+          path: "/chatbot.png",
         },
       ],
     },
@@ -36,19 +38,19 @@ const workSlides = {
       images: [
         {
           title: "title",
-          path: "/neon1.jpg",
+          path: "/VerseEstate.png",
         },
         {
           title: "title",
-          path: "/neon2.jpg",
+          path: "/vibeverse",
         },
         {
           title: "title",
-          path: "/neon3.jpg",
+          path: "/vibeverseUI",
         },
         {
           title: "title",
-          path: "/purple1.jpg",
+          path: "/forex-strategy",
         },
       ],
     },
@@ -56,6 +58,7 @@ const workSlides = {
 };
 
 const WorkSlider = () => {
+  let navigate = useNavigate();
   const PF = process.env.PUBLIC_URL;
 
   return (
@@ -81,7 +84,10 @@ const WorkSlider = () => {
             <div className="p-2 grid grid-cols-2 grid-rows-2 gap-2">
               {slide.images.map((image, index) => {
                 return (
-                  <div className="h-32 xl:h-36 w-[100%] rounded-lg relative group cursor-pointer">
+                  <div
+                    className="h-32 xl:h-36 w-[100%] rounded-lg relative group cursor-pointer"
+                    onClick={() => navigate("/upcoming")}
+                  >
                     {/* image */}
                     <img
                       src={`${PF}/images${image.path}`}

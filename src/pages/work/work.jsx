@@ -42,10 +42,10 @@ function Work() {
                 My Projects
               </h1>
               <p className="text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum
-                repudiandae, enim aliquid dicta magni expedita dignissimos quod
-                rem. Maiores, rerum eveniet sit voluptatem sint officia. Cumque
-                maxime consequatur rerum! Sunt?
+                Stay tuned for our upcoming projects, where innovation meets
+                excellence. Exciting developments are on the horizon, promising
+                to redefine the boundaries of technology and creativity. Join us
+                as we embark on these ventures, shaping the future together.
               </p>
             </motion.div>
 

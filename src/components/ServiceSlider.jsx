@@ -22,27 +22,27 @@ const serviceData = [
   {
     icon: <RxDesktop />,
     title: "Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Transforming ideas into digital realities.",
   },
   {
     icon: <RxDashboard />,
     title: "Front-End",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Crafting intuitive and engaging user interfaces.",
   },
   {
     icon: <RxCardStack />,
     title: "Back-End",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Powering applications with scalable and secure server-side logic.",
   },
   {
     icon: <RxCodesandboxLogo />,
     title: "MERN",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Integrating MongoDB, Express, React, and Node for full-stack excellence.",
   },
   {
     icon: <RxRocket />,
     title: "SEO",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Optimizing visibility for maximum online impact.",
   },
 ];
 

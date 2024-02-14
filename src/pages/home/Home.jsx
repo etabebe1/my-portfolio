@@ -30,7 +30,7 @@ export default function Home() {
             Welcome to digital reality, <br /> meet
             <span className="text-red-600"> Jeremiah </span>
             <span className="text-sky-800">
-              Blockchain Alchemist | Code Maestro
+              Blockchain developer | MERN stack developer
             </span>
           </motion.h1>
           {/* subtitle */}

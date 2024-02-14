@@ -41,10 +41,13 @@ export default function services() {
                 My services
               </h1>
               <p className="text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum
-                repudiandae, enim aliquid dicta magni expedita dignissimos quod
-                rem. Maiores, rerum eveniet sit voluptatem sint officia. Cumque
-                maxime consequatur rerum! Sunt?
+                Delivering cutting-edge solutions across the full development
+                spectrum, I specialize in the MERN stack, crafting seamless
+                front-end experiences, robust back-end systems, and
+                comprehensive SEO strategies. As a full-stack developer, my
+                services encompass end-to-end development, ensuring your project
+                not only meets but exceeds expectations. Let's build something
+                remarkable together.
               </p>
             </motion.div>
 
