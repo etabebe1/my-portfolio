@@ -7,6 +7,7 @@ import Work from "../pages/work/work";
 import Services from "../pages/services/services";
 import Testimonials from "../pages/testimonials/testimonials";
 import Contact from "../pages/contact/contact";
+import Upcoming from "../pages/upcoming/upcoming";
 
 // framer-motion
 import { AnimatePresence } from "framer-motion";
@@ -78,6 +79,16 @@ export default function AnimatedRoute() {
             element={
               <Layout>
                 <Contact />
+              </Layout>
+            }
+          />
+
+          {/* Upcoming Route */}
+          <Route
+            path="upcoming"
+            element={
+              <Layout>
+                <Upcoming className="bg-green-500" />
               </Layout>
             }
           />
