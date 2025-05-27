@@ -103,12 +103,12 @@ const About = () => {
     <Transition>
       <section className="main-container" aria-label="About Section">
         {/* particle */}
-        <div className="h-full top-0" aria-hidden="true">
+        <div className="h-full top-0 bg-red-500" aria-hidden="true">
           <ParticlesContainer />
         </div>
 
         {/* all content here*/}
-        <div className="absolute flex h-full">
+        <div className="absolute flex h-full overflow-x-hidden overflow-y-hidden">
           {/* avatar image */}
           <motion.div
             className="absolute -right-[15.5rem] bottom-0 hidden xl:flex"
