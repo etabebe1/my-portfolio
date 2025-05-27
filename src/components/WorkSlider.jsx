@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-// import swiper core and require modules
+// import swiper core and required modules
 import { Pagination, FreeMode } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -18,21 +18,25 @@ const workSlides = {
       images: [
         {
           title: 'Cyaxiom',
+          description: 'Web3 | Blockchain company',
           path: '/cyaxiom.png',
           url: 'https://cyaxiom.com',
         },
         {
           title: 'EthioHope',
+          description: 'Kids coding bootcamp and resources',
           path: '/EthioHope.png',
           url: 'https://kids-coding.ethiohope.com/',
         },
         {
           title: 'Red Sea Assisted Living',
+          description: 'Senior care facility with heart',
           path: '/RedSea.png',
           url: 'https://redseaassistedliving.com/',
         },
         {
           title: 'Kids Goal Academy',
+          description: 'Soccer training for kids with big dreams',
           path: '/kidsgoal.png',
           url: 'https://kidsgoalsocceracademy.com/',
         },
@@ -42,23 +46,27 @@ const workSlides = {
       images: [
         {
           title: 'Responsible Lending',
+          description: 'Advocacy for fair financial practices',
           path: '/responsiblelending.png',
           url: 'https://www.responsiblelending.org/',
         },
         {
           title: 'VibeVerse',
+          description: 'A virtual world of vibes and culture',
           path: '/vibeverse.jpg',
-          url: 'https://vibeverse.example.com',
+          url: '', // Upcoming
         },
         {
           title: 'VibeVerse UI',
+          description: 'UI/UX for immersive metaverse experience',
           path: '/vibeverseUI.jpg',
-          url: 'https://vibeverse-ui.example.com',
+          url: '', // Upcoming
         },
         {
           title: 'Forex Strategy UI',
+          description: 'Interactive tools for forex analysis',
           path: '/forex-strategy.jpg',
-          url: 'https://forex-strategy.example.com',
+          url: '', // Upcoming
         },
       ],
     },
@@ -67,6 +75,7 @@ const workSlides = {
 
 const WorkSlider = () => {
   const PF = process.env.PUBLIC_URL;
+  const navigate = useNavigate();
 
   return (
     <Swiper
@@ -90,7 +99,11 @@ const WorkSlider = () => {
               <div
                 key={index}
                 className="sm:h-28 xl:h-36 w-full rounded-lg relative group cursor-pointer"
-                onClick={() => window.open(image.url, '_blank')}
+                onClick={() =>
+                  image.url
+                    ? window.open(image.url, '_blank')
+                    : navigate('/upcoming')
+                }
               >
                 <img
                   src={`${PF}/images${image.path}`}
@@ -98,18 +111,27 @@ const WorkSlider = () => {
                   loading="lazy"
                   className="w-full h-full rounded-lg object-cover object-center z-10"
                 />
-                <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-slate-500/40 via-slate-900/40 to-slate-400/40 opacity-0 group-hover:opacity-80 z-20 top-0 rounded-lg transition-all duration-300 flex justify-center shadow-md">
-                  <div className="absolute bottom-0 group-hover:-translate-y-10 xl:group-hover:-translate-y-20 transition-all duration-300">
-                    <div className="flex items-center gap-x-2 text-[12px] xl:text-base justify-center font-semibold tracking-[.1rem] uppercase">
-                      <div className="delay-250 text-shadow-xl shadow-white">
-                        Live
-                      </div>
-                      <div className="text-shadow-xl shadow-white translate-y-[220%] xl:translate-y-[350%] group-hover:translate-y-0 transition-all duration-300 delay-150">
-                        Project
-                      </div>
-                      <div className="text-[16px] xl:text-xl text-shadow-xl shadow-white translate-y-[280%] xl:translate-y-[410%] group-hover:translate-y-0 transition-all duration-300 delay-200">
-                        <RxArrowRight />
-                      </div>
+                <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-slate-900/60 via-slate-800/60 to-slate-700/60 opacity-0 group-hover:opacity-100 z-20 top-0 rounded-lg transition-all duration-300 flex flex-col justify-between items-center p-4 shadow-md">
+                  {/* Project Title */}
+                  <div className="w-full text-center text-white text-base xl:text-xl font-extrabold tracking-wide uppercase drop-shadow-md border-b border-white/30 pb-2">
+                    {image.title}
+                  </div>
+
+                  {/* Project Description */}
+                  <div
+                    className={`text-[10px] xl:text-[12px] mt-1 font-medium tracking-wide text-center ${
+                      image.url ? 'text-slate-200' : 'text-slate-400 italic'
+                    }`}
+                  >
+                    {image.description}
+                  </div>
+
+                  {/* Live Project Label */}
+                  <div className="flex items-center gap-x-2 text-[12px] xl:text-base font-semibold tracking-[.1rem] uppercase text-white">
+                    <div className="text-shadow-xl">Live</div>
+                    <div className="text-shadow-xl">Project</div>
+                    <div className="text-[16px] xl:text-xl">
+                      <RxArrowRight />
                     </div>
                   </div>
                 </div>
