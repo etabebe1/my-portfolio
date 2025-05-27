@@ -113,7 +113,7 @@ const WorkSlider = () => {
                 />
                 <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-slate-900/60 via-slate-800/60 to-slate-700/60 opacity-0 group-hover:opacity-100 z-20 top-0 rounded-lg transition-all duration-300 flex flex-col justify-between items-center p-4 shadow-md">
                   {/* Project Title */}
-                  <div className="w-full text-center text-white text-base xl:text-xl font-extrabold tracking-wide uppercase drop-shadow-md border-b border-white/30 pb-2">
+                  <div className="w-full text-center text-white text-sm xl:text-xl font-extrabold tracking-wide uppercase drop-shadow-md border-b border-white/30 pb-2">
                     {image.title}
                   </div>
 
@@ -127,7 +127,7 @@ const WorkSlider = () => {
                   </div>
 
                   {/* Live Project Label */}
-                  <div className="flex items-center gap-x-2 text-[12px] xl:text-base font-semibold tracking-[.1rem] uppercase text-white">
+                  <div className="flex items-center gap-x-2 text-[11px] xl:text-base font-semibold tracking-[.1rem] uppercase text-white">
                     <div className="text-shadow-xl">Live</div>
                     <div className="text-shadow-xl">Project</div>
                     <div className="text-[16px] xl:text-xl">
