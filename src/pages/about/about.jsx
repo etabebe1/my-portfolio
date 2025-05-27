@@ -243,7 +243,9 @@ const About = () => {
                         ))}
 
                       {item.desc && (
-                        <p className="text-gray-600 w-full mt-2">{item.desc}</p>
+                        <p className="text-gray-600 w-full mt-2 text-[11px] md:text-[15px]">
+                          {item.desc}
+                        </p>
                       )}
                     </div>
                   </article>
