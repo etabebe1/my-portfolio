@@ -9,11 +9,11 @@ import AnimatedRoute from './components/AnimatedRoute';
 function App() {
   return (
     <Router>
-      <div className="overlflow-hidden">
+      {/* overflow hidden on both x and y axes */}
+      <div className="overflow-x-hidden overflow-y-hidden">
         <Nav />
         <Header />
         <TopLeftImage />
-
         <AnimatedRoute />
       </div>
     </Router>
