@@ -5,8 +5,7 @@ This project showcases who I am, what I’ve built, and the technologies I work 
 
 ## 🌐 Live Website
 
-[Visit My Portfolio](https://jeremiah-eight.vercel.app/)  
-_(Replace with your actual deployed URL)_
+[Visit My Portfolio](https://jeremiah-eight.vercel.app/)
 
 ## 👨‍💻 About Me
 
@@ -17,8 +16,6 @@ From working with the MERN stack to exploring smart contract technologies, I bui
 
 - **Frontend**: React, Tailwind CSS, Framer Motion
 - **Backend**: Node.js, Express
-- **Database**: MongoDB
+- **Database**: MongoDB, MySQL
 - **Blockchain**: (Currently learning) Solidity, Smart Contract basics
 - **Other**: Git & GitHub, Vercel/Netlify (for deployment), VS Code
-
-## 📁 Project Structure
