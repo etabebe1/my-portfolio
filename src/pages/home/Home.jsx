@@ -28,7 +28,15 @@ export default function Home() {
           >
             I'm <br />
             <span className="text-red-600">Jeremiah</span>, Founder of{' '}
-            <span className="text-sky-800 font-bold">Cyaxiom</span> <br />
+            <a
+              href="https://cyaxiom.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky-800 font-bold hover:underline"
+            >
+              Cyaxiom
+            </a>{' '}
+            <br />
             Full Stack (MERN) & Blockchain Developer
           </motion.h1>
 
