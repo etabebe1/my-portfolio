@@ -16,9 +16,9 @@ export default function Home() {
 
   return (
     <Transition>
-      <div className="container w-full xl:flex items-center justify-around h-full mx-auto flex ">
+      <div className="container w-full xl:flex items-center justify-around h-full mx-auto">
         {/* text */}
-        <div className="text-center xl:text-left  xl:max-w-xl xl:pt-40 xl:px-20">
+        <div className="text-center xl:text-left xl:max-w-xl xl:pt-40 xl:px-20">
           <motion.h1
             variants={fadeIn('down', 0.4)}
             initial="hidden"
@@ -26,30 +26,32 @@ export default function Home() {
             exit="hidden"
             className="h1 text-lg md:text-2xl"
           >
-            Welcome to digital reality, <br /> meet
-            <span className="text-red-600"> Jeremiah </span>
-            <span className="text-sky-800">
-              Full Stack | MERN developer & Blockchain developer
-            </span>
+            I'm <br />
+            <span className="text-red-600">Jeremiah</span>, Founder of{' '}
+            <span className="text-sky-800 font-bold">Cyaxiom</span> <br />
+            Full Stack (MERN) & Blockchain Developer
           </motion.h1>
+
           {/* subtitle */}
           <motion.p
-            variants={fadeIn('down', 0.4)}
+            variants={fadeIn('down', 0.5)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="text-white/80 text-sm"
+            className="text-white/80 text-sm mt-2"
           >
-            Building reliable full-stack applications and exploring blockchain
-            development. Focused on solving real-world problems with clean,
-            efficient code and helping businesses grow through technology.
+            I’m Ermias, a passionate software engineer focused on building
+            secure, scalable web apps and decentralized systems. With deep
+            expertise in MERN Stack and smart contracts, I help businesses grow
+            and innovate through modern web technologies. Let’s turn ideas into
+            impact.
           </motion.p>
 
-          {/* project btn (mobile view) + Download Resume always visible on mobile */}
-          <div className="flex xl:hidden justify-center relative gap-1 mt-4 items-center">
+          {/* project btn (mobile view) + Download Resume */}
+          <div className="flex xl:hidden justify-center gap-2 mt-4 items-center">
             <ProjectBtn />
             <a
-              href={`${PF}/resume.pdf`}
+              href={`${PF}/Ermias Resume.pdf`}
               download
               className="flex items-center gap-2 bg-white text-sky-700 text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-sky-100 transition-all duration-300"
             >
@@ -60,7 +62,7 @@ export default function Home() {
 
           {/* project btn + download resume (desktop view) */}
           <motion.div
-            variants={fadeIn('down', 0.4)}
+            variants={fadeIn('down', 0.6)}
             initial="hidden"
             animate="show"
             exit="hidden"
@@ -81,11 +83,14 @@ export default function Home() {
         {/* image */}
         <div className="image-container relative h-full">
           {/* overlay */}
-          <div className="absolute h-full w-full  "></div>
+          <div className="absolute h-full w-full" />
 
           {/* bg for avatar */}
-          <div className="bg-image hidden xl:block ">
-            <img src={`${PF}/images/bg_explosion.png`} alt="avatarImage" />
+          <div className="bg-image hidden xl:block">
+            <img
+              src={`${PF}/images/bg_explosion.png`}
+              alt="Ermias - Full Stack & Blockchain Developer"
+            />
           </div>
 
           {/* particle */}
