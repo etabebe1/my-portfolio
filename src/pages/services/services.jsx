@@ -12,18 +12,15 @@ import Circles from '../../components/Circles';
 import Bulb from '../../components/Bulb';
 import ServiceSlider from '../../components/ServiceSlider';
 
-export default function Services() {
+export default function services() {
   return (
     <Transition>
-      <section
-        className="flex h-screen items-center py-36 relative"
-        aria-label="Services Section"
-      >
+      <div className="flex h-screen items-center py-36">
         {/* particles */}
-        <ParticleContainer aria-hidden="true" />
+        <ParticleContainer />
 
         {/* Circle */}
-        <div className="absolute bottom-0 right-0" aria-hidden="true">
+        <div className="absolute bottom-0 right-0">
           <Circles />
         </div>
 
@@ -36,15 +33,15 @@ export default function Services() {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="flex flex-col max-w-xl"
+              className="flex flex-col"
             >
               <h1
                 style={{ textShadow: '2px 2px 7px rgba(0, 0, 0, 0.2)' }}
                 className="text-xl md:text-4xl font-semibold"
               >
-                My Services
+                My services
               </h1>
-              <p className="text-xs sm:text-sm mt-3">
+              <p className="text-xs sm:text-sm">
                 Delivering cutting-edge solutions across the full development
                 spectrum, I specialize in the MERN stack, crafting seamless
                 front-end experiences, robust back-end systems, and
@@ -61,33 +58,26 @@ export default function Services() {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="w-full max-w-[95%] xl:w-[65%] mt-6 xl:mt-0"
-              aria-label="Service offerings slider"
+              className="w-full max-w-[95%] xl:w-[65%]"
             >
-              <ServiceSlider />
+              <ServiceSlider></ServiceSlider>
             </motion.div>
           </div>
         </div>
 
         {/* Bulb */}
-        <div className="bulb-container">
-          {/* bulb 1 in xl screen */}
-          <div
-            className="absolute bottom-0 -right-28 -rotate-12 hidden xl:block"
-            aria-hidden="true"
-          >
+        <div className="bulb-container  ">
+          {/* bulb 1 in xl - screen */}
+          <div className="absolute bottom-0 -right-28  -rotate-12 hidden xl:block">
             <Bulb />
           </div>
 
-          {/* bulb 2 in sm screen */}
-          <div
-            className="absolute bottom-0 -left-24 rotate-12 xl:hidden"
-            aria-hidden="true"
-          >
+          {/* bulb 2 in sm - screen */}
+          <div className="absolute bottom-0 -left-24 rotate-12 xl:hidden">
             <Bulb />
           </div>
         </div>
-      </section>
+      </div>
     </Transition>
   );
 }
