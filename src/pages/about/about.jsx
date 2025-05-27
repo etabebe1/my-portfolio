@@ -99,14 +99,11 @@ const About = () => {
   const [itemIndex, setItemIndex] = useState(0);
   const PF = process.env.PUBLIC_URL;
 
-  // LOGS:
-  // console.log(itemIndex);
-
   return (
     <Transition>
-      <div className="main-container">
+      <section className="main-container" aria-label="About Section">
         {/* particle */}
-        <div className="h-full top-0">
+        <div className="h-full top-0" aria-hidden="true">
           <ParticlesContainer />
         </div>
 
@@ -119,6 +116,7 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
+            aria-hidden="true"
           >
             <Avatar />
           </motion.div>
@@ -139,7 +137,7 @@ const About = () => {
                 Compelling<span className="text-sky-700"> journeys </span>
                 inspire remarkable designs.
               </h1>
-              <p className="text-white/85 text-xs md:text-sm">
+              <p className="text-white/85 text-xs md:text-sm max-w-xl">
                 I started learning how to code back in high school. At first, I
                 was just curious about how websites work, but that curiosity
                 quickly turned into something more. Over time, I learned how to
@@ -151,31 +149,39 @@ const About = () => {
               </p>
 
               {/* Counter */}
-              <div className="container flex justify-center text-center gap-2 text-sm md:text-xl xl:text-2xl">
+              <div
+                className="container flex justify-center text-center gap-2 text-sm md:text-xl xl:text-2xl"
+                role="list"
+                aria-label="Experience statistics"
+              >
                 {/* experience */}
-                <div>
+                <article role="listitem" aria-label="Years of experience">
                   <div className="counter-container font-semibold text-sky-700">
                     <CountUp start={0.1} end={5} duration={10} />+
                   </div>
                   <span>Years of experience</span>
-                </div>
+                </article>
 
                 {/*Project */}
-                <div className="relative px-3">
+                <article
+                  role="listitem"
+                  aria-label="Finished projects"
+                  className="relative px-3"
+                >
                   <div className="before:absolute before:bg-gray-800 before:w-[1px] before:h-full before:left-0 after:absolute after:bg-gray-800 after:w-[1px] after:h-full after:right-0 after:top-0">
                     <div className="counter-container font-semibold text-sky-700">
                       <CountUp start={1} end={50} duration={10} />+
                     </div>
-                    <span>Finished Project</span>
+                    <span>Finished Projects</span>
                   </div>
-                </div>
+                </article>
                 {/* worked with */}
-                <div>
+                <article role="listitem" aria-label="Collaborated developers">
                   <div className="counter-container font-semibold text-sky-700">
                     <CountUp start={0.1} end={30} duration={10} />+
                   </div>
-                  <span>collaborated developers</span>
-                </div>
+                  <span>Collaborated Developers</span>
+                </article>
               </div>
             </motion.div>
 
@@ -186,68 +192,71 @@ const About = () => {
               exit="hidden"
               className="data-container flex flex-col gap-3  xl:h-full w-screen justify-center items-center"
             >
-              <div className="flex gap-4 ">
-                {aboutData.map((item, index) => {
-                  return (
-                    <div
-                      key={index}
-                      className={`relative capitalize text-sm xl:text-lg font-semibold cursor-pointer before:absolute before:h-[2px] before:bottom-0 after:absolute after:h-[2px]  after:left-0 after:top-0 hover:after:w-[100%] hover:before:w-[100%] before:transition-all before:duration-500 after:transition-all after:duration-500 
-                    ${
-                      +index === +itemIndex
-                        ? 'before:bg-sky-700 before:w-[100%] after:w-[100%] after:bg-sky-700 text-sky-700'
-                        : 'after:bg-white before:bg-white after:w-[5%]  before:w-[5%]'
-                    } `}
-                      onClick={() => setItemIndex(index)}
-                    >
+              <nav
+                aria-label="About categories"
+                className="flex gap-4 mb-4"
+                role="tablist"
+              >
+                {aboutData.map((item, index) => (
+                  <button
+                    key={index}
+                    className={`relative capitalize text-sm xl:text-lg font-semibold cursor-pointer before:absolute before:h-[2px] before:bottom-0 after:absolute after:h-[2px]  after:left-0 after:top-0 hover:after:w-[100%] hover:before:w-[100%] before:transition-all before:duration-500 after:transition-all after:duration-500 
+                      ${
+                        index === itemIndex
+                          ? 'before:bg-sky-700 before:w-[100%] after:w-[100%] after:bg-sky-700 text-sky-700'
+                          : 'after:bg-white before:bg-white after:w-[5%]  before:w-[5%]'
+                      } `}
+                    onClick={() => setItemIndex(index)}
+                    role="tab"
+                    aria-selected={index === itemIndex}
+                    tabIndex={index === itemIndex ? 0 : -1}
+                    id={`tab-${index}`}
+                    aria-controls={`tabpanel-${index}`}
+                  >
+                    {item.title}
+                  </button>
+                ))}
+              </nav>
+
+              {/* Details panel */}
+              <section
+                role="tabpanel"
+                id={`tabpanel-${itemIndex}`}
+                aria-labelledby={`tab-${itemIndex}`}
+                className="flex flex-col gap-1 md:gap-4 text-center items-center max-w-3xl"
+              >
+                {aboutData[itemIndex].info.map((item, index) => (
+                  <article key={index} className="mb-6">
+                    <h3 className="text-sm md:text-base lg:text-lg text-sky-700">
                       {item.title}
+                    </h3>
+
+                    <div className="subtitle flex flex-wrap gap-2 md:gap-4 items-center justify-center z-20 text-center">
+                      {item.icons &&
+                        item.icons.map((icon, iconIndex) => (
+                          <img
+                            src={`${PF}/${icon}`}
+                            key={iconIndex}
+                            alt={`${item.title} icon ${iconIndex + 1}`}
+                            className="w-[35px] md:w-[50px] xl:w-[55px] border p-1 rounded-md shadow-md hover:p-0 transition-all duration-300 z-50"
+                          />
+                        ))}
+
+                      {item.desc && (
+                        <p className="text-gray-600 w-full mt-2">{item.desc}</p>
+                      )}
                     </div>
-                  );
-                })}
-              </div>
-
-              {/* motion framer not working */}
-              <div className="flex flex-col gap-1 md:gap-4 text-center items-center max-w-3xl">
-                {aboutData[itemIndex].info.map((item, index) => {
-                  return (
-                    <div key={index}>
-                      {/* title */}
-                      <span className="text-sm md:text-base lg:text-lg text-sky-700">
-                        {item.title}
-                      </span>
-
-                      {/* sub-title */}
-                      <div className="subtitle flex flex-wrap gap-2 md:gap-4 items-center justify-center z-20 text-center">
-                        {item.icons &&
-                          item.icons.map((icon, index) => {
-                            return (
-                              <img
-                                src={`${PF}/${icon}`}
-                                key={index}
-                                alt=""
-                                className="w-[35px] md:w-[50px] xl:w-[55px] border p-1 rounded-md shadow-md hover:p-0 transition-all duration-300 z-50"
-                              />
-                            );
-                          })}
-
-                        {/* descriptions */}
-                        {item.desc && (
-                          <p className="text-gray-600 w-full mt-2">
-                            {item.desc}
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
+                  </article>
+                ))}
+              </section>
             </motion.div>
           </div>
         </div>
 
-        <div className="absolute bottom-0 right-0">
+        <div className="absolute bottom-0 right-0" aria-hidden="true">
           <Circles />
         </div>
-      </div>
+      </section>
     </Transition>
   );
 };

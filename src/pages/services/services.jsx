@@ -1,26 +1,29 @@
-import React from "react";
+import React from 'react';
 
 // framer-motion
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 // framer-motion variant
-import { fadeIn } from "../../variants";
+import { fadeIn } from '../../variants';
 
-import Transition from "../../components/Transition";
-import ParticleContainer from "../../components/ParticlesContainer";
-import Circles from "../../components/Circles";
-import Bulb from "../../components/Bulb";
-import ServiceSlider from "../../components/ServiceSlider";
+import Transition from '../../components/Transition';
+import ParticleContainer from '../../components/ParticlesContainer';
+import Circles from '../../components/Circles';
+import Bulb from '../../components/Bulb';
+import ServiceSlider from '../../components/ServiceSlider';
 
-export default function services() {
+export default function Services() {
   return (
     <Transition>
-      <div className="flex h-screen items-center py-36">
+      <section
+        className="flex h-screen items-center py-36 relative"
+        aria-label="Services Section"
+      >
         {/* particles */}
-        <ParticleContainer />
+        <ParticleContainer aria-hidden="true" />
 
         {/* Circle */}
-        <div className="absolute bottom-0 right-0">
+        <div className="absolute bottom-0 right-0" aria-hidden="true">
           <Circles />
         </div>
 
@@ -29,19 +32,19 @@ export default function services() {
           <div className="flex flex-col xl:flex-row justify-center items-center gap-x-4 md:px-[5rem] text-center xl:text-left">
             {/* text */}
             <motion.div
-              variants={fadeIn("right", 0.5)}
+              variants={fadeIn('right', 0.5)}
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="flex flex-col"
+              className="flex flex-col max-w-xl"
             >
               <h1
-                style={{ textShadow: "2px 2px 7px rgba(0, 0, 0, 0.2)" }}
+                style={{ textShadow: '2px 2px 7px rgba(0, 0, 0, 0.2)' }}
                 className="text-xl md:text-4xl font-semibold"
               >
-                My services
+                My Services
               </h1>
-              <p className="text-xs sm:text-sm">
+              <p className="text-xs sm:text-sm mt-3">
                 Delivering cutting-edge solutions across the full development
                 spectrum, I specialize in the MERN stack, crafting seamless
                 front-end experiences, robust back-end systems, and
@@ -54,30 +57,37 @@ export default function services() {
 
             {/* slider component */}
             <motion.div
-              variants={fadeIn("left", 0.5)}
+              variants={fadeIn('left', 0.5)}
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="w-full max-w-[95%] xl:w-[65%]"
+              className="w-full max-w-[95%] xl:w-[65%] mt-6 xl:mt-0"
+              aria-label="Service offerings slider"
             >
-              <ServiceSlider></ServiceSlider>
+              <ServiceSlider />
             </motion.div>
           </div>
         </div>
 
         {/* Bulb */}
-        <div className="bulb-container  ">
-          {/* bulb 1 in xl - screen */}
-          <div className="absolute bottom-0 -right-28  -rotate-12 hidden xl:block">
+        <div className="bulb-container">
+          {/* bulb 1 in xl screen */}
+          <div
+            className="absolute bottom-0 -right-28 -rotate-12 hidden xl:block"
+            aria-hidden="true"
+          >
             <Bulb />
           </div>
 
-          {/* bulb 2 in sm - screen */}
-          <div className="absolute bottom-0 -left-24 rotate-12 xl:hidden">
+          {/* bulb 2 in sm screen */}
+          <div
+            className="absolute bottom-0 -left-24 rotate-12 xl:hidden"
+            aria-hidden="true"
+          >
             <Bulb />
           </div>
         </div>
-      </div>
+      </section>
     </Transition>
   );
 }
