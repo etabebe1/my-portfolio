@@ -111,7 +111,7 @@ const About = () => {
         <div className="absolute flex h-full">
           {/* avatar image */}
           <motion.div
-            className="absolute -right-[17rem] bottom-0 hidden xl:flex"
+            className="absolute -right-[15.5rem] bottom-0 hidden xl:flex"
             variants={fadeIn('left', 0.2)}
             initial="hidden"
             animate="show"
