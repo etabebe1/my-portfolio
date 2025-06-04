@@ -50,7 +50,7 @@ export default function Home() {
           <div className="flex flex-col w-fit mx-auto xl:hidden justify-center relative">
             <ProjectBtn />
             <a
-              href={`${PF}/resume.pdf`}
+              href={`${PF}/Ermias Resume.pdf`}
               download
               className="flex items-center gap-2 bg-white text-sky-700 text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-sky-100 transition-all duration-300"
             >
@@ -68,7 +68,7 @@ export default function Home() {
           >
             <ProjectBtn className="bg-blue-300" />
             <a
-              href={`${PF}/resume.pdf`}
+              href={`${PF}/Ermias Resume.pdf`}
               download
               className="flex h-fit items-center gap-2 bg-white text-sky-700 text-sm font-medium px-4 py-2 rounded-md shadow hover:bg-sky-100 transition-all duration-300"
             >
