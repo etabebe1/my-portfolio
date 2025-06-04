@@ -1,33 +1,33 @@
 // import swiper core and require module
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-import { Pagination, Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { FaQuoteLeft } from "react-icons/fa";
+import { FaQuoteLeft } from 'react-icons/fa';
 
 // testimonial data
 const testimonialData = [
   {
-    image: "/t-avt-1.png",
-    name: "Anne Smith",
-    position: "Customer",
+    image: '/t-avt-1.png',
+    name: 'Lulit Amanuel',
+    position: 'Founder',
     message:
-      "Transformed our ideas into a seamless digital experience with exceptional technical expertise. Outstanding problem-solving skills and effective communication made the development process smooth and impactful.",
+      'Transformed our ideas into a seamless digital experience with exceptional technical expertise. Outstanding problem-solving skills and effective communication made the development process smooth and impactful.',
   },
   {
-    image: "/t-avt-2.png",
-    name: "Jane Doe",
-    position: "Customer",
+    image: '/t-avt-2.png',
+    name: 'Meklit Tesfaye',
+    position: 'Manager',
     message:
-      "The dedication and technical skill brought to our project were pivotal for its success. A strong commitment to excellence and understanding our needs distinguished their work.!",
+      'The dedication and technical skill brought to our project were pivotal for its success. A strong commitment to excellence and understanding our needs distinguished their work!',
   },
   {
-    image: "/t-avt-3.png",
-    name: "Jhon Doe",
-    position: "Customer",
+    image: '/t-avt-3.png',
+    name: 'Cassian Vireo',
+    position: 'Tech Lead',
     message:
       "Played a crucial role in overcoming our project's technical challenges, ensuring success through adaptability and insightful innovation. Their contributions were invaluable to our team.",
   },
@@ -65,11 +65,13 @@ const TestimonialSlider = () => {
                     className="h-16 w-16 sm:h-full sm:w-full object-cover object-center"
                   />
                   <h2 className="capitalize text-sm">{name}</h2>
-                  <span className="uppercase text-sm font-semibold">{position}</span>
+                  <span className="uppercase text-sm font-semibold">
+                    {position}
+                  </span>
                 </div>
                 <div className="flex flex-col items-center xl:items-start">
                   <FaQuoteLeft
-                    style={{ textShadow: "2px 2px 7px rgba(0, 0, 0, 0.2)" }}
+                    style={{ textShadow: '2px 2px 7px rgba(0, 0, 0, 0.2)' }}
                     className="text-2xl xl:text-5xl text-gray-700/90"
                   ></FaQuoteLeft>
                   <span className="text-xs">{message}</span>
